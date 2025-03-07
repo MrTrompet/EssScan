@@ -1,7 +1,20 @@
 {
+    "$schema": "https://railway.com/railway.schema.json",
     "build": {
-      "builder": "python",
-      "installCommand": "pip install -r requirements.txt"
+      "builder": "NIXPACKS"
     },
-    "startCommand": "python ESSScan/main.py"
+    "deploy": {
+      "runtime": "V2",
+      "numReplicas": 1,
+      "startCommand": "python EssScan/main.py",  // Ajusta esta ruta según donde esté tu archivo main.py
+      "sleepApplication": false,
+      "multiRegionConfig": {
+        "us-west2": {
+          "numReplicas": 1
+        }
+      },
+      "restartPolicyType": "ON_FAILURE",
+      "restartPolicyMaxRetries": 10
+    }
   }
+  
