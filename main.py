@@ -58,4 +58,9 @@ def main():
             time.sleep(SCAN_INTERVAL)
 
 if __name__ == "__main__":
-    main()
+    while True:
+        try:
+            main()
+        except Exception as e:
+            print(f"[ERROR] {e}")
+            time.sleep(5)
