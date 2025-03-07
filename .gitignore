@@ -1,0 +1,5 @@
+# Ignorar archivos sensibles
+config.py
+__pycache__/
+*.env
+*.log
