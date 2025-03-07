@@ -1,1 +1,1 @@
-worker: python ESSScan/main.py
+worker: python EssScan/main.py
