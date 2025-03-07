@@ -6,8 +6,7 @@ feature_columns = ['open', 'high', 'low', 'close', 'volume', 'sma_long', 'bb_low
 # Configuración de Telegram
 import os
 
-API_KEY = os.getenv('API_KEY')
-API_SECRET = os.getenv('API_SECRET')
+API_KEY = os.getenv('API_KEY', 'default_api_key')
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
 TARGET_THREAD_ID = int(os.getenv('TARGET_THREAD_ID', 2740))  # ID del tema "Ecosystem Signals"
